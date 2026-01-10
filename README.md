@@ -90,33 +90,46 @@ It is built to be **secure**, **scalable**, and **production-ready**, using mode
 
 ## 📁 Project Structure
 
+```txt
 pricepulse/
 ├── app/
-│ ├── page.js # Landing page
-│ ├── actions.js # Server actions
-│ ├── auth/callback/route.js # Google OAuth callback
-│ └── api/cron/check-prices/route.js # Cron endpoint
+│   ├── page.js                     # Landing page
+│   ├── actions.js                  # Server actions
+│   ├── auth/
+│   │   └── callback/
+│   │       └── route.js             # Google OAuth callback
+│   └── api/
+│       └── cron/
+│           └── check-prices/
+│               └── route.js         # Cron endpoint
+│
 ├── components/
-│ ├── ui/ # shadcn/ui components
-│ ├── AddProductForm.js
-│ ├── ProductCard.js
-│ ├── PriceChart.js
-│ └── AuthModal.js
+│   ├── ui/                          # shadcn/ui components
+│   ├── AddProductForm.js
+│   ├── ProductCard.js
+│   ├── PriceChart.js
+│   └── AuthModal.js
+│
 ├── lib/
-│ ├── firecrawl.js # Firecrawl integration
-│ ├── email.js # Email templates
-│ └── utils.js
-├── utils/supabase/
-│ ├── client.js
-│ ├── server.js
-│ └── middleware.js
-├── supabase/migrations/
-│ ├── 001_schema.sql # DB schema & RLS
-│ └── 002_setup_cron.sql # Cron job setup
-└── .env.local
+│   ├── firecrawl.js                 # Firecrawl integration
+│   ├── email.js                     # Email templates
+│   └── utils.js
+│
+├── utils/
+│   └── supabase/
+│       ├── client.js
+│       ├── server.js
+│       └── middleware.js
+│
+├── supabase/
+│   └── migrations/
+│       ├── 001_schema.sql           # DB schema & RLS
+│       └── 002_setup_cron.sql       # Cron job setup
+│
+├── .env.local                       # Environment variables
+└── package.json
+```
 
-yaml
-Copy code
 
 ---
 
