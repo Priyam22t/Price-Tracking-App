@@ -137,9 +137,10 @@ Copy code
 git clone https://github.com/your-username/pricepulse.git
 cd pricepulse
 npm install
-Environment Variables (.env.local)
-env
-Copy code
+```
+
+### Environment Variables (`.env.local`)
+```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
@@ -151,53 +152,69 @@ RESEND_FROM_EMAIL=onboarding@resend.dev
 
 CRON_SECRET=your_generated_secret
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-Run the App
-bash
-Copy code
+```
+
+### Run the App
+```bash
 npm run dev
-Open http://localhost:3000
+```
 
-☁️ Deployment
-Deploy easily on Vercel
+Open **http://localhost:3000**
 
-Add environment variables in Vercel dashboard
+---
 
-Update Supabase cron endpoint to production URL
+## ☁️ Deployment
 
-App is production-ready and scalable
+- Deploy easily on **Vercel**
+- Add environment variables in the Vercel dashboard
+- Update Supabase cron endpoint to the production URL
+- App is production-ready and scalable
 
-🐛 Common Issues & Tips
-No price history shown
+---
+
+## 🐛 Common Issues & Tips
+
+**No price history shown**  
 Price history appears after at least one automated price check runs.
 
-Cron job not updating prices
-Ensure SUPABASE_SERVICE_ROLE_KEY and CRON_SECRET are set correctly.
+**Cron job not updating prices**  
+Ensure `SUPABASE_SERVICE_ROLE_KEY` and `CRON_SECRET` are set correctly.
 
-Scraping failures
+**Scraping failures**  
 Some websites block scraping; adjusting Firecrawl prompts can help.
 
-Emails not delivered
+**Emails not delivered**  
 Verify Resend API key and sender email setup.
 
-🎨 Customization Ideas
-Change cron frequency (hourly, daily, weekly)
+---
 
-Extract additional product data (brand, rating, availability)
+## 🎨 Customization Ideas
 
-Add price comparison features
+- Change cron frequency (hourly, daily, weekly)
+- Extract additional product data (brand, rating, availability)
+- Add price comparison features
+- Support multiple notification channels
 
-Support multiple notification channels
+---
 
-🤝 Contributing
+## 🤝 Contributing
+
 Contributions are welcome!
 
-Fork the repository
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit your changes  
+4. Open a pull request  
 
-Create a feature branch
+---
 
-Commit your changes
+## 📄 License
 
-Open a pull request
-
-📄 License
 MIT License
+
+---
+
+## 📌 About
+
+**PricePulse** is a smart product price tracking application that monitors prices across major e-commerce sites. It uses Firecrawl for reliable scraping, Supabase for secure storage and scheduled cron jobs, Google OAuth for authentication, and sends automated email alerts when prices drop.
+
